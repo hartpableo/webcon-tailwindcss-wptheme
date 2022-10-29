@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/skitter.styles.min.css">
+    <link rel="stylesheet" href="css/rslides.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body class="min-h-screen w-full relative page-content max-w-[1920px] mx-auto overflow-x-hidden window600:pb-[45px]">
+    <!-- Header -->
+    <header class="page-section">
+        <div class="wrapper">
+            <div class="page-section__content flex flex-row justify-between items-center window800:block">
+
+                <!--------------->
+                <!-- Main Logo -->
+                <!--------------->
+                <div class="main-logo max-w-[200px]">
+                    <a href="#">
+                        <figure><img src="images/main-logo.png" alt="company name"></figure>
+                    </a>
+                </div>
+                <!--------------->
+                <!-- Main Logo -->
+                <!--------------->
+
+                <div class="head-info text-right window800:text-center">
+                    <div class="header-info">
+                        <p>Contact Us! <mark>000-123-4567</mark></p>
+                    </div>
+                    <div class="social-media">
+                        <ul class="flex flex-row justify-end items-center gap-[6px] window800:justify-center">
+                            <li class="leading-none">
+                                <a href="#" class="hover:opacity-75">
+                                    <figure><img src="images/icons/fb.png" alt="facebook"></figure>
+                                </a>
+                            </li>
+                            <li class="leading-none">
+                                <a href="#" class="hover:opacity-75">
+                                    <figure><img src="images/icons/twitter.png" alt="twitter"></figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Nav -->
+    <div id="nav-area" class="page-section bg-secondaryColor window1000:p-[15px]">
+        <div class="page-section__content">
+            <div class="wrapper window800:flex window800:flex-row window800:justify-between window800:items-center">
+                <div class="page-nav site-navigation">
+                    <!----------------------->
+                    <!-- Header Navigation -->
+                    <!----------------------->
+                    <ul>
+                        <li class="current_page_item"><a href="#">Home</a></li>
+                        <li><a href="#">Aboout Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <!----------------------->
+                    <!-- Header Navigation -->
+                    <!----------------------->
+                </div>
+                <div class="hamburger-container cursor-pointer text-center w-fit uppercase hidden window800:block">
+                    <div class="hamburger p-3 space-y-[6px] bg-gray-600 rounded shadow">
+                        <span class="block w-8 h-[3px] bg-gray-100 animate-pulse rounded-full"></span>
+                        <span class="block w-8 h-[3px] bg-gray-100 animate-pulse rounded-full"></span>
+                        <span class="block w-8 h-[3px] bg-gray-100 animate-pulse rounded-full"></span>
+                    </div>
+                    <small class="block font-bold text-[16px]">Menu</small>
+                </div>
+            </div>
+
+            <!----------------->
+            <!-- Mobile Menu -->
+            <!----------------->
+            <div class="mobile-menu invisible pointer-events-none overflow-hidden fixed z-[9998] top-0 right-0 w-screen h-screen bg-[rgba(0,0,0,.9)] window800:block">
+                <div class="page-nav-mobile fixed h-full top-0 right-0 z-[9999] translate-x-[200%] duration-[770ms]">
+                    <div class="hamburger-close-container flex flex-row justify-between items-center py-[20px] px-[15px] bg-primaryColor">
+                        <div class="mobile-menu-logo w-[140px] max-w-[78%]">
+                            <a href="#">
+                                <figure><img src="images/main-logo.png" alt="company name"></figure>
+                            </a>
+                        </div>
+                        <div class="hamburger-close text-center uppercase cursor-pointer text-white">
+                            <i class="fa fa-times text-[35px] leading-[1]" aria-hidden="true"></i>
+                            <small class="block text-[16px]">Close</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------->
+            <!-- Mobile Menu -->
+            <!----------------->
+        </div>
+    </div>
+    <!-- End Nav -->
+
+    <!-- Banner -->
+    <div id="banner" class="page-section overflow-x-hidden window1000:p-0">
+        <div class="wrapper">
+            <div class="page-section__content">
+                <div class="slider w-[1920px] ml-[50%] h-[400px] translate-x-[-50%] clearfix window1200:w-[160%] window1200:h-auto">
+                    <!-- rslides -->
+                    <ul class="rslides hidden window1200:block">
+                        <li><figure><img src="images/slider/1.jpg" alt=""/></figure></li>
+                        <li><figure><img src="images/slider/2.jpg" alt=""/></figure></li>
+                        <li><figure><img src="images/slider/3.jpg" alt=""/></figure></li>
+                    </ul>
+                    <!-- rslides -->
+
+                    <!-- skitter-slider -->
+                    <div class="box_skitter box_skitter_large w-[1920px] h-[400px] window1200:hidden">
+                        <ul>
+                            <li><figure><img src="images/slider/1.jpg" class="random" alt=""/></figure></li>
+                            <li><figure><img src="images/slider/2.jpg" class="random" alt=""/></figure></li>
+                            <li><figure><img src="images/slider/3.jpg" class="random" alt=""/></figure></li>
+                        </ul>
+                    </div>
+                    <!-- skitter-slider -->
+                </div>
+
+                <div class="page-section__info banner absolute z-[150] top-1/2 translate-y-[-50%] left-0 window1000:static window1000:transform-none window1000:text-center window1000:py-[40px] window1000:px-[25px]">
+                    <h2 class="page-section__info--heading theme-heading"><small class="page-section__info--heading-sub text-secondaryColor">This is where we put</small> Your Amazing Slogan!</h2>
+                    <div class="page-section__info--body">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugit odit a optio id velit.</p>
+                    </div>
+                    <div class="page-section__info--buttons justify-start window1000:justify-center">
+                        <a href="#" class="theme-button">About Us &raquo;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Middle -->
+    <div id="middle1" class="page-section">
+        <div class="wrapper">
+            <div class="page-section__content py-[45px] window1000:p-0">
+                <div class="cards-container text-center">
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Middle -->
+
+    <!-- Main -->
+    <div id="main-area" class="page-section bg-primaryColor text-white">
+        <div class="wrapper">
+            <div class="page-section__content py-[60px] gap-[10px] flex flex-row justify-between items-center window1000:flex-col window1000:gap-[25px] window1000:p-0">
+                <main id="main-content" class="w-[64%] window1000:w-full">
+                    <h1 class="font-bold font-secondaryFont text-[50px] leading-[1.1] mb-[35px]">Company Name <small class="block leading-none font-primaryFont text-[30px] font-[500]">Home Healthcare</small></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id distinctio rerum nostrum facilis fugit maiores magni, exercitationem ipsum. Voluptas veniam eaque perferendis, architecto amet quidem fugit perspiciatis consectetur, possimus placeat repellat corrupti commodi alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae cupiditate voluptate, quisquam porro quidem?</p>
+                </main>
+                <aside class="sidebar p-[15px] bg-slate-800 text-white w-[28.5%] window1000:w-full max-w-[400px]">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt neque ea ducimus reprehenderit, doloribus earum quos. Veniam laudantium debitis facere quas quos quia, deserunt libero.</p>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <!-- End Main -->
+
+    <!-- Bottom -->
+    <div id="bottom1" class="page-section">
+        <div class="wrapper">
+            <div class="page-section__content py-[50px] window1000:p-0">
+                <div class="page-section__info bottom1 text-center mb-[50px]">
+                    <h2 class="page-section__info--heading theme-heading">This is a section of the page</h2>
+                    <div class="page-section__info--body">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugit odit a optio id velit.</p>
+                    </div>
+                    <div class="page-section__info--buttons">
+                        <a href="#" class="theme-button">View More &raquo;</a>
+                    </div>
+                </div>
+                <div class="cards-container bottom1 text-left wow fadeInDown" data-wow-duration="3000ms">
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                    <section class="card">
+                        <h3 class="card--title">Dummy <span class="card--title-sub">Title</span></h3>
+                        <div class="card--body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, fuga.</div>
+                        <div class="card--buttons">
+                            <a href="#" class="button">Click Here</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom2" class="page-section bg-secondaryColor text-white">
+        <div class="wrapper">
+            <div class="page-section__content py-[55px] window1000:p-0">
+                <div class="page-section__info bottom2 text-center mb-[50px]">
+                    <h2 class="page-section__info--heading theme-heading text-inherit"><small class="page-section__info--heading-sub">Reach Out To Us</small> Send Us a Message</h2>
+                    <div class="page-section__info--body mb-0 mt-[15px]">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugit odit a optio id velit.</p>
+                    </div>
+                </div>
+                <form action="#" method="post" id="submit_formmessage">
+                    <div class="email-validation"></div>
+                    <div class="form-fields">
+                        <input type="text" name="Full_Name" placeholder="Full Name *" class="form_fullname">
+                        <input type="email" name="Email_Address" placeholder="Email Address *" class="form_email">
+                        <textarea name="Question_or_Comment" placeholder="Message(s)"></textarea>
+                        <button type="submit" name="submit_info" class="form_btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Bottom -->
+
+    <!-- Footer -->
+    <footer>
+
+        <!---------------->
+        <!-- Footer Top -->
+        <!---------------->
+        <div class="footer-top page-section bg-slate-600 text-white font-light">
+            <div class="wrapper">
+                <div class="page-section__content py-[65px] flex flex-row justify-between items-center window1000:p-0 window1000:block">
+                    <div class="contact-info w-[47%] window1000:w-full">
+                        <div class="page-section__info bottom2 mb-[25px]">
+                            <h2 class="page-section__info--heading theme-heading text-inherit">Contact Information</h2>
+                            <div class="page-section__info--body mb-0 mt-[15px]">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugit odit a optio id velit.</p>
+                            </div>
+                        </div>
+                        <ul class="contact-info__list">
+                            <li>
+                                Location: <address>13003 Elmington Dr.<br> Cypress, TX 77429-2062</address>
+                            </li>
+                            <li>
+                                <span class="block">Email: <a href="mailto:sample@gmail.com">sample@gmail.com</a></span>
+                                <span class="block">Phone: <mark>000-000-0000</mark></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <iframe class="gmap rounded-full w-[400px] h-[400px] min-h-0 window1000:rounded-[25px] window1000:w-full window1000:mt-[25px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4732.835838316189!2d123.90607731523465!3d10.31859027029766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9991589ee1ad9%3A0x79969054a5178cf4!2sKeppel%20Tower%20Cebu%20Business%20Park!5e1!3m2!1sen!2sph!4v1666841064337!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <!---------------->
+        <!-- Footer Top -->
+        <!---------------->
+
+        <!------------------->
+        <!-- Footer Bottom -->
+        <!------------------->
+        <div class="footer-bottom page-section">
+            <div class="wrapper">
+                <div class="page-section__content">
+                    <div class="footer-nav site-navigation">
+                        <!----------------------->
+                        <!-- Footer Navigation -->
+                        <!----------------------->
+                        <ul>
+                            <li class="current_page_item"><a href="#">Home</a></li>
+                            <li><a href="#">Aboout Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <!----------------------->
+                        <!-- Footer Navigation -->
+                        <!----------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------->
+        <!-- Footer Bottom -->
+        <!------------------->
+    </footer>
+
+    <!------------------------>
+    <!-- Back To Top Button -->
+    <!------------------------>
+    <div class="back-to-top hidden z-[99999] fixed left-0 right-0 bottom-0 h-[45px] bg-themeBlack cursor-pointer text-white text-center hover:opacity-80"><i class="fa fa-solid fa-caret-up text-[40px] leading-[1] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"></i></div>
+    <!------------------------>
+    <!-- Back To Top Button -->
+    <!------------------------>
+
+    <!-- End Footer -->
+
+    <script src="js/modernizr-custom-v2.7.1.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/calcheight.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.skitter.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/plugins.js"></script>
+</body>
+</html>

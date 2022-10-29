@@ -1,0 +1,404 @@
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+/*=== You can modify this CSS file with global styles and components that you can reuse throughout your theme for faster development. ===*/
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+
+
+
+/*===============*/
+/*=== helpers/utilities ===*/
+/*===============*/
+@layer utilities {
+    .page-content{
+        @apply text-[16px] leading-[28px] font-primaryFont text-themeBlack;
+    }
+    .theme-heading{
+        @apply text-[55px] font-bold font-secondaryFont leading-[1.1];
+    }
+    .theme-button{
+        @apply inline-block text-center bg-secondaryColor text-white text-[18px] leading-none py-[20px] px-[35px] hover:bg-primaryColor;
+    }
+    .upcoming{
+        @apply text-red-600 italic font-bold;
+    }
+    .col2{
+        @apply gap-0 columns-2 window600:columns-1;
+    }
+    .col3{
+        @apply gap-0 columns-3 window600:columns-1;
+    }
+    .col2 li, 
+    .col3 li{
+        @apply overflow-hidden inline-block w-full;
+    }
+}
+/*===============*/
+/*=== helpers/utilities ===*/
+/*===============*/
+
+
+/*=========================*/
+/*=== global nav styles ===*/
+/*=========================*/
+@layer components {
+    .site-navigation ul{
+        @apply window1000:text-center;
+    }
+    .site-navigation ul li{
+        @apply inline-block relative align-top window1000:w-[31%] window1000:m-[5px];
+    }
+    .site-navigation ul li a{
+        @apply window1000:p-[2px] window1000:border window1000:border-solid window1000:border-themeBlack window1000:bg-secondaryColor window1000:text-white;
+    }
+    .site-navigation ul li a:hover, .site-navigation ul li.current_page_item a {
+        @apply underline underline-offset-4 window1000:no-underline window1000:bg-white window1000:text-themeBlack window1000:flex window1000:flex-col window1000:justify-center window1000:items-center window1000:min-h-[52px];
+    }
+    .site-navigation span{
+        @apply absolute right-[25px] top-[32px] hidden p-0 cursor-pointer z-[9] text-primaryColor text-center;
+    }
+    .site-navigation .fa{
+        display:block; margin-top: -3px;
+        @apply block mt-[-3px];
+        @apply before:absolute before:left-0 before:right-0 before:content-["\f0d7"];
+    }
+    .site-navigation .fa-caret-up{
+        @apply before:content-["\f0d8"];
+    }
+    .site-navigation ul li.menu-item-has-children > span{
+        @apply window1024:block window1024:text-[17px] window1024:right-[20px] window1024:top-[30px] window1024:absolute window1000:right-0 window1000:top-[15px];
+    }
+    /*second level drop down*/
+    .site-navigation ul li:hover{
+        @apply relative z-[599] cursor-default;
+    }
+    .site-navigation ul ul {
+        @apply hidden absolute top-[100%] left-0 z-[598] w-[180px] mt-[0] normal-case window1000:w-full window800:static;
+    }
+    .site-navigation ul ul li{
+        @apply float-none block font-normal w-full window1000:m-0;
+        @apply after:hidden;
+    }
+    .site-navigation ul ul ul {
+        @apply top-0 left-auto right-[-99.5%];
+    }
+    .site-navigation ul li:hover > ul { 
+        @apply block window1024:hidden;
+    }
+    .site-navigation ul ul a{
+        @apply bg-[#799847] text-white py-[12px] px-[10px] leading-[1] my-0 mx-auto;
+    }
+    .site-navigation ul ul a:hover,
+    .site-navigation ul li.current_page_item ul li a:hover, 
+    .site-navigation ul ul li.current_page_item a {
+        @apply bg-[#1a271a] text-[#a5ff16] no-underline;
+    }
+    /*third level drop down*/
+    .site-navigation ul ul ul {
+         @apply border-none;
+     }
+    .site-navigation ul ul li {
+        @apply relative;
+    }
+}
+/*=========================*/
+/*=== global nav styles ===*/
+/*=========================*/
+
+
+/*=========================================*/
+/*=== default section/area in home page ===*/
+/*=========================================*/
+.page-section{
+    @apply py-0 px-[10px] relative window1000:py-[40px] window1000:px-[25px];
+}
+.wrapper{
+    @apply container mx-auto relative max-w-[1400px];
+}
+.page-section__content{
+    @apply w-full window1000:p-0 window1000:min-h-0 window1000:max-h-[none];
+}
+/*=========================================*/
+/*=== default section/area in home page ===*/
+/*=========================================*/
+
+
+/*=============================*/
+/*=== simple card component ===*/
+/*=============================*/
+.cards-container{
+    @apply flex flex-row gap-[10px] justify-between items-stretch window1000:flex-wrap window1000:justify-center;
+}
+@layer components {
+    .card{
+        @apply bg-slate-600 text-white relative w-1/3 pt-[25px] px-[25px] pb-[120px] max-w-[445px] window1000:w-[49%] window600:w-full window600:max-w-none;
+    }
+    .card--title{
+        @apply font-secondaryFont leading-[1.1] mb-[15px] text-[26px] font-bold;
+    }
+    .card--title-sub{
+        @apply block;
+    }
+    .card--buttons{
+        @apply flex flex-row gap-[10px] justify-center items-stretch absolute left-1/2 translate-x-[-50%] bottom-[40px] window600:flex-col;
+    }
+    .card--buttons .button{
+        @apply inline-block text-center bg-slate-900 text-white hover:bg-secondaryColor rounded-full leading-[45px] w-[170px] text-[18px];
+    }
+}
+/*=============================*/
+/*=== simple card component ===*/
+/*=============================*/
+
+
+/*=============================*/
+/*=== simple info component ===*/
+/*=============================*/
+@layer components {
+    .page-section__info{
+
+    }
+    .page-section__info--heading{
+        
+    }
+    .page-section__info--heading-sub{
+        @apply block text-[25px] leading-[1.1];
+    }
+    .page-section__info--body{
+        @apply my-[25px];
+    }
+    .page-section__info--buttons{
+        @apply flex flex-row gap-[10px] justify-center items-stretch window600:flex-col;
+    }
+}
+/*=============================*/
+/*=== simple info component ===*/
+/*=============================*/
+
+
+
+/*===========================*/
+/*=== home form component ===*/
+/*===========================*/
+@layer components {
+    #submit_formmessage .form-fields{
+        @apply flex flex-row justify-between items-stretch window1000:flex-wrap window1000:gap-[10px];
+    }
+    #submit_formmessage .form-fields input, #submit_formmessage .form-fields textarea, #submit_formmessage .form-fields button[type="submit"] {
+        @apply font-primaryFont rounded-full h-[50px] pl-[30px] bg-white text-themeBlack;
+    }
+    #submit_formmessage .form-fields input[type="text"]{
+        @apply w-[21%] window1000:w-[49%] window800:w-full;
+    }
+    #submit_formmessage .form-fields input[type="email"]{
+        @apply w-[21%] window1000:w-[49%] window800:w-full;
+    }
+    #submit_formmessage .form-fields textarea{
+        @apply w-[42%] pt-[10px] window1000:w-full;
+    }
+    #submit_formmessage .form-fields button[type="submit"]{
+        @apply w-[12%] text-center p-[0] window1000:w-[170px] hover:bg-primaryColor hover:text-white window1000:mx-auto;
+    }
+}
+/*===========================*/
+/*=== home form component ===*/
+/*===========================*/
+
+
+/*=======================*/
+/*=== non-home banner ===*/
+/*=======================*/
+@layer components {
+    .non_ban {
+        @apply relative;
+    }
+    .non_ban_img{
+        @apply w-[1920px] ml-[50%] min-h-[400px] bg-white translate-x-[-50%] window1024:w-[185%] window1000:min-h-0 window1000:p-0 window600:w-[200%];
+    }
+    .non_ban_img img{
+        @apply h-auto align-middle;
+    }
+
+    .page_title {
+        @apply absolute uppercase w-full leading-[100%] py-[5px] px-[80px] text-center z-[1] bottom-0 left-0 w-full font-secondaryFont window1000:p-[25px] window1000:static window1000:bg-primaryColor;
+        /* .page_title:before */
+        @apply before:content-[""] before:bg-primaryColor before:w-[1920px] before:absolute before:top-0 before:h-full before:left-[50%] before:translate-x-[-50%] before:z-[-1] before:opacity-70 window1000:before:hidden;
+        /* .page_title:before */
+    }
+    .page_title h1.h1_title{
+        @apply text-[60px] text-white leading-[1] window600:text-[40px] window1000:text-[55px];
+    }
+}
+/*=======================*/
+/*=== non-home banner ===*/
+/*=======================*/
+
+/*===================*/
+/*=== breadcrumbs ===*/
+/*===================*/
+#breadcrumbs {
+    @apply text-themeBlack mb-[25px] border-b-2 border-dotted border-b-[#999] pb-[10px];
+}
+#breadcrumbs a{
+    @apply text-secondaryColor hover:underline;
+}
+#breadcrumbs span{
+    @apply align-bottom inline-block overflow-hidden overflow-ellipsis;
+}
+#breadcrumbs span[property='name'] {
+    @apply inline-block p-0 mt-[-3px] align-bottom max-w-[270px] whitespace-nowrap overflow-hidden overflow-ellipsis text-[#d9b3ff] hover:underline;
+}
+#breadcrumbs .post {
+    @apply rounded-none p-0 m-0 border-none break-normal text-white;
+}
+#breadcrumbs span[class='post post-page current-item'] {
+    @apply inline-block p-0 max-w-[250px] whitespace-nowrap;
+}
+/*===================*/
+/*=== breadcrumbs ===*/
+/*===================*/
+
+
+/*===============*/
+/*=== sitemap ===*/
+/*===============*/
+.sitemap{
+    @apply list-none p-0 columns-2 gap-x-[3px];
+}
+.sitemap.col2,
+.sitemap.col3 {
+    @apply gap-x-[.5em];
+}
+.sitemap li {
+    counter-increment: step-counter;
+    @apply overflow-hidden bg-[#E3E3E3] py-[5px] px-[15px];
+    @apply odd:bg-[#f2f2f2];
+}
+.sitemap li a{
+    @apply block;
+}
+.sitemap li a:before {
+    content: counter(step-counter) '. ';
+}
+.sitemap ul {
+    @apply mt-[5px];
+}
+.sitemap ul li {
+    counter-increment: sub-counter;
+    @apply odd:bg-[#e3e3e3];
+    @apply even:bg-[#f2f2f2];
+}
+.sitemap ul li a:before {
+    content: counter(step-counter) '.' counter(sub-counter) ' ';
+}
+/*===============*/
+/*=== sitemap ===*/
+/*===============*/
+
+
+/*=================*/
+/*=== resources ===*/
+/*=================*/
+.resources{
+    @apply gap-x-[.25em];
+}
+.resources a {
+    @apply block font-bold transition-all ease-linear duration-[.3s];
+    @apply hover:pl-[2px] hover:underline;
+}
+.resources ul,
+.resources li {
+    @apply list-none m-0 p-0;
+}
+.resources ul li {
+    margin-bottom:8px; padding:12px; background:#FAFDFE;border:1px solid #ececec;
+    @apply mb-0 p-[12px] bg-[#FAFDFE] border border-solid border-[#ececec];
+}
+.resources ul li:before,
+.resources ul li:after {
+    @apply content-[""];
+}
+.resources ul li a span {
+    @apply text-[11px] text-[#666] tracking-[1px] block break-words;
+    word-wrap: break-word;-webkit-hyphens: auto;-ms-hyphens: auto;-moz-hyphens: auto;hyphens: auto;
+}
+/*=================*/
+/*=== resources ===*/
+/*=================*/
+
+
+/*==================*/
+/*=== intro text ===*/
+/*==================*/
+.intro_txt {
+    @apply text-[30px] leading-[1] text-black mb-[30px] pb-[18px] border-b-[3px] border-solid border-b-primaryColor text-center font-bold;
+}
+/*==================*/
+/*=== intro text ===*/
+/*==================*/
+
+
+/*=====================*/
+/*=== bulleted list ===*/
+/*=====================*/
+main .bullet {
+    @apply p-0 mb-[15px];
+}
+main .bullet li{
+    @apply relative pl-[25px] mb-[8px];
+}
+main .bullet li:before{
+    @apply absolute content-[""] w-[10px] h-[10px] rounded-full left-[3px] top-[9px] bg-primaryColor;
+}
+/*=====================*/
+/*=== bulleted list ===*/
+/*=====================*/
+
+
+/*================*/
+/*=== 404 page ===*/
+/*================*/
+.search-form {
+    @apply flex flex-col justify-center items-center gap-[30px];
+}
+.search-form .screen-reader-text{
+    @apply hidden;
+}
+.search-form label {
+    @apply w-full max-w-[650px];
+}
+.search-form .search-field {
+    @apply pl-[16px] h-[70px] w-full text-themeBlack;
+}
+.search-form .search-submit {
+    @apply text-center inline-block py-[12px] px-[47px] cursor-pointer bg-primaryColor text-white font-light hover:bg-secondaryColor uppercase font-bold;
+}
+/*================*/
+/*=== 404 page ===*/
+/*================*/
+
+
+/*======================*/
+/*=== search results ===*/
+/*======================*/
+.search_results div.page, 
+.search_results div.post, 
+.search_results div.product {
+    @apply p-[15px] border border-solid border-white bg-[#ffffe1] my-[10px] mx-0 text-black;
+}
+.search_results h2 a {
+    @apply text-[25px] font-secondaryFont font-bold;
+}
+.page .entry-meta, 
+.product .entry-meta {
+    @apply hidden;
+}
+.search_results .entry-summary {
+    @apply font-light text-[16px] leading-[1.6] my-[15px] mx-auto;
+}
+.search_results a {
+    @apply font-bold hover:underline;
+}
+/*======================*/
+/*=== search results ===*/
+/*======================*/

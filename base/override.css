@@ -1,0 +1,79 @@
+/*==============================================*/
+/*==============================================*/
+/*=== You can override default styling here. ===*/
+/*==============================================*/
+/*==============================================*/
+
+
+/*==============*/
+/*=== resets ===*/
+/*==============*/
+img{
+    @apply w-full max-w-full;
+}
+mark{
+    @apply bg-transparent text-inherit;
+}
+address{
+    @apply not-italic;
+}
+a[href*="mailto:"]{
+    @apply hover:underline underline-offset-2;
+}
+a.post-edit-link{
+    @apply font-bold text-secondaryColor;
+}
+/*==============*/
+/*=== resets ===*/
+/*==============*/
+
+/*===============*/
+/*=== presets ===*/
+/*===============*/
+.comp{
+    @apply font-bold text-primaryColor;
+}
+
+.clearfix:before, .clearfix:after {
+    @apply content-[""] table clear-both; 
+}
+.clearfix {
+    @apply clear-both overflow-hidden;
+}
+.main_phone {
+    @apply font-bold;
+}
+main a{
+    @apply hover:underline;
+}
+body:not(.home) main a{
+    @apply font-bold text-secondaryColor;
+}
+body:not(.home) main h2{
+    @apply font-bold text-[1.4rem] mt-[15px] mb-[5px] mx-0;
+}
+body:not(.home) main h3{
+    @apply font-bold text-[1.35rem] mt-[15px] mb-[5px] mx-0;
+}
+body:not(.home) main p{
+    @apply mb-[25px];
+}
+/*===============*/
+/*=== presets ===*/
+/*===============*/
+
+
+/*=================*/
+/*=== templated ===*/
+/*=================*/
+/*For (AddThis) Plugins*/
+.withAddThis_plugins {
+    @apply bottom-[48px];
+}
+.withAddThis_ftr_btm {
+    @apply pt-0 px-[10px] pb-[88px];
+}
+/*End (AddThis) Plugins*/
+/*=================*/
+/*=== templated ===*/
+/*=================*/

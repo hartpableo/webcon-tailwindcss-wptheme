@@ -1,0 +1,16 @@
+{
+  "name": "conversion-template-tailwindcss-based",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./css/main.css --minify",
+    "watch": "tailwindcss -i ./input.css -o ./css/main.css --minify --watch"
+  },
+  "keywords": [],
+  "author": "Hart",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}

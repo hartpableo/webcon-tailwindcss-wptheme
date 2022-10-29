@@ -1,0 +1,106 @@
+/*======================*/
+/*=== base css files ===*/
+/*======================*/
+@import './base/override.css';
+@import './base/typography.css';
+@import './base/components.css';
+/*======================*/
+/*=== base css files ===*/
+/*======================*/
+
+/*===============================*/
+/*=== TailwindCSS integration ===*/
+/*===============================*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*===============================*/
+/*=== TailwindCSS integration ===*/
+/*===============================*/
+
+
+
+/*===================================================*/
+/*===================================================*/
+/*=== You can write theme-based custom CSS below. ===*/
+/*===================================================*/
+/*===================================================*/
+
+
+
+/*=================*/
+/*=== templated ===*/
+/*=================*/
+body.no-scroll{
+    @apply overflow-hidden;
+}
+.mobile-menu.show{
+    @apply visible pointer-events-auto;
+}
+.page-nav-mobile.show-nav{
+    @apply transform-none;
+}
+/*=================*/
+/*=== templated ===*/
+/*=================*/
+
+
+
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+/* main navigation */
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+.page-nav {
+    @apply window800:w-[280px] window800:bg-white window800:h-full window800:overflow-y-scroll window800:px-[10px] window800:py-[15px];
+}
+.page-nav ul{
+    @apply text-center;
+}
+.page-nav ul li{
+    @apply window800:block window800:m-0 window800:w-full window800:mb-[10px] window800:last-of-type:mb-0;
+}
+.page-nav ul li a{
+    @apply block py-0 px-[30px] text-white leading-[60px] window1000:border-white;
+}
+.page-nav ul li a:hover, .page-nav ul li.current_page_item a{
+    @apply window1000:border-themeBlack; 
+}
+/* .page-nav ul li:first-child a{
+    @apply pl-0;
+}
+.page-nav ul li:last-child a{
+    @apply pr-0;
+} */
+
+
+
+
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+/* simple cards component template */
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+.cards-container.bottom1 .card{
+    @apply max-w-[385px] window600:max-w-none;
+}
+
+.cards-container.bottom1 .card--title-sub{
+    @apply inline-block;
+}
+
+.cards-container.bottom1 .card--buttons{
+    @apply transform-none left-[25px];
+}
+
+
+
+
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+/* footer navigation */
+/*-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+.footer-nav ul{
+    @apply text-center;
+}
+.footer-nav ul li{
+    @apply window600:w-full;
+}
+.footer-nav ul li a{
+    @apply block py-0 px-[30px] leading-[60px];
+}
